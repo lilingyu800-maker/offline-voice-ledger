@@ -1,0 +1,16 @@
+sherpa-onnx 1.13.8
+sherpa-onnx-core 1.13.8
+numpy 2.5.4
+sounddevice 0.5.6
+openpyxl 3.1.5
+cffi 2.1.1
+pycparser 3.11
+et-xmlfile 2.0.0
+
+SenseVoice Small 模型：按随附模型 LICENSE 指向的 FunASR MODEL_LICENSE 核对，不能标为 Apache-2.0。
+SenseVoice 代码仓库当前 LICENSE：MIT；与模型权重协议不同。
+Silero VAD: MIT
+ONNX Runtime: MIT
+PortAudio: MIT
+Python: PSF
+Tcl/Tk: BSD-style

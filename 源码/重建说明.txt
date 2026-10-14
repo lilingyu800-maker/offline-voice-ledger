@@ -1,0 +1,17 @@
+这是源码仓库的重建说明。仓库未附带 EXE、运行库、模型或测试音频；完整程序的用户才可直接双击 EXE。
+
+需要 Windows x64、Python 3.12（包括 Tcl/Tk）和网络以安装构建依赖。
+1. 创建虚拟环境并安装 requirements.txt 中的依赖。
+2. 在仓库根目录（含“源码”文件夹的目录）执行：
+python -m PyInstaller --noconfirm --windowed --onedir --name 离线语音记账 --distpath 构建/dist --workpath 构建/pyinstaller --specpath 源码 --collect-all sherpa_onnx --collect-all sherpa_onnx_core --collect-all sounddevice --collect-all _sounddevice_data --exclude-module PIL --exclude-module matplotlib --exclude-module pandas 源码/main.py
+3. 构建/dist/离线语音记账 中包含 EXE 和 _internal，将已准备好的“模型”目录复制到同一目录，再本地测试。
+4. 模型/sensevoice 必须包含 model.int8.onnx、tokens.txt、silero_vad.onnx，准备方法见仓库根目录“模型准备.md”。
+5. 离线自检（不会给真实桌面添加测试账目）：
+离线语音记账.exe --self-test 绝对路径\报告.json
+可加 --audio 绝对路径\测试.wav 检查示例语音的完整识别链路。
+本源码仓库没有附带示例音频。可自行准备有权使用的录音，内容必须为“记账，清风，四个八十八A硒鼓”。
+音频参数要求为单声道 16 位 PCM，自检预期内容固定为上述示例。
+自检会临时阻止 Python socket 发起网络连接，验证本地模型推理、三列表格、旧版迁移备份、账目追加、恢复和重试去重。
+自检不等同于真实麦克风录音测试。
+
+公开完整打包程序之前，需要核对随附模型和全部二进制组件的许可、版权及 NOTICE，再附上必要文件。源码仓库 MIT 不覆盖第三方库和模型，具体见 THIRD_PARTY_NOTICES.md。

@@ -1,0 +1,1 @@
+Apache licensed, as found in the LICENSE file
