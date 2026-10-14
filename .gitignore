@@ -1,0 +1,46 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Personal ledger, local state, and recordings
+账目/
+OfflineVoiceLedger/
+设置.json
+两分钟草稿.json
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.xlsx
+*.xls
+*.csv
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.log
+*.tmp
+
+# Packaged application and models: distribute through Releases
+/_internal/
+*.exe
+*.zip
+*.7z
+*.onnx
+
+# Python and build output
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+构建/
+.构建缓存/
+build/
+dist/
+.pytest_cache/
