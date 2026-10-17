@@ -74,3 +74,12 @@ py -3.12 -m venv .venv
 本项目自写代码和自写文档按 [MIT](LICENSE) 授权，可修改、分享和商用，须保留版权和许可声明。第三方组件及模型不因此改为 MIT，见 [第三方说明](THIRD_PARTY_NOTICES.md)。Codex 协助开发的署名不表示官方认证或质量担保。
 
 具体参与方式见 [贡献说明](CONTRIBUTING.md)。
+
+## 下载即用（Windows 10/11 64位）
+
+**[点击下载完整离线版](https://github.com/lilingyu800-maker/offline-voice-ledger/releases/latest)**
+
+在 Assets 中选择名称含 `windows-x64-full` 的 ZIP；全部解压后双击 `离线语音记账.exe`。
+语音模型和依赖已包含，无需另外下载。需要桌面快捷方式时运行 `安装到本机.cmd`。
+
+`Code → Download ZIP` 和 `Source code` 是开发源码，普通使用者请下载上面的完整离线版。
